@@ -75,6 +75,7 @@ prev.addEventListener('click', () => {
     audioEle.play();
     if(masterplay.classList.contains("fa-play-circle"))
         masterplay.classList.replace("fa-play-circle", "fa-pause-circle");
+        document.getElementById("gif").style.opacity = 1;
 })
 
 forw.addEventListener('click', () => {
@@ -88,6 +89,7 @@ forw.addEventListener('click', () => {
     audioEle.play();
     if(masterplay.classList.contains("fa-play-circle"))
         masterplay.classList.replace("fa-play-circle", "fa-pause-circle");
+        document.getElementById("gif").style.opacity = 1;
 })
 
 
