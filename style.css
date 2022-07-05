@@ -32,7 +32,7 @@ nav ul{
     padding: 13px;
  }
  .container{
-    min-height: 50%;
+    min-height: 80%;
     background-color: black;
     color: white;
     display: flex;
