@@ -32,7 +32,7 @@ nav ul{
     padding: 13px;
  }
  .container{
-    min-height: 75vh;
+    min-height: 50%;
     background-color: black;
     color: white;
     display: flex;
@@ -41,6 +41,7 @@ nav ul{
     border-radius: 20px;
     padding: 30px;
     background-image:url('bg2.jpg');
+    justify-content: center;
  }
 .bottom{
     background-color: black;
