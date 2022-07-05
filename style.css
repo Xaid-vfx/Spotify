@@ -45,8 +45,8 @@ nav ul{
 .bottom{
     background-color: black;
     position:sticky;
-    height: 130px;
-    bottom:0;
+    height: 150px;
+    bottom: 0;
     display: flex;
     justify-content: center;
     color: white;
@@ -61,6 +61,8 @@ nav ul{
     padding: 10px;
     margin-top: 10px;
     cursor: pointer;
+    display: flex;
+    gap: 15px;
 }
 .songitem{
     display: flex;
@@ -89,12 +91,34 @@ nav ul{
     margin-top: 40px;
 }
 .songinfo{
-    position: absolute;
-    left:10vw;
     display: flex;
     gap: 10px;
 }
 .songinfo img{
     opacity: 0;
     transition: opacity .4s ease-in ;
+}
+
+.home{
+    cursor: pointer;
+    background: black;
+    color: white;
+    border: black;
+    padding: 10px;
+}
+.link{
+text-decoration: none; 
+ text-decoration: none;
+}
+.para{
+    color: white;
+    display: flex;
+    margin: 50px;
+}
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+.gif{
+    position: absolute;
+    left:10%;
 }
