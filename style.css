@@ -45,9 +45,10 @@ nav ul{
  }
 .bottom{
     background-color: black;
-    position:sticky;
+    position:absolute;
     height: 150px;
     bottom: 0;
+    right: 10%;
     display: flex;
     justify-content: center;
     color: white;
@@ -122,7 +123,7 @@ body {
 }
 .gif{
     position: absolute;
-    left:10%;
+    left:33%;
 }
 .songName{
     padding: 7%;
