@@ -97,10 +97,12 @@ nav ul{
     display: flex;
     gap: 10px;
     justify-content: center;
+    align-items: center;
 }
 .songinfo img{
     opacity: 0;
     transition: opacity .4s ease-in ;
+
 }
 
 .home{
@@ -123,8 +125,8 @@ body {
     font-family: 'Varela Round', sans-serif;
 }
 .gif{
-    bottom: 20%;
-    position: absolute;
+left:0%;
+position: absolute;
 }
 .songName{
     padding: 7%;
