@@ -7,6 +7,8 @@ let smallplay = document.getElementById('timest');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 let prev = document.getElementById('previoussong');
 let forw = document.getElementById('nextsong');
+let songplay=Array.from(document.getElementsByClassName("fa-solid fa fa-play-circle"));
+let preclick=0;
 
 let songs = [
     { songName: "Let Me", filePath: "Let Me.mp3", coverPath: "cover.jpg" },
@@ -21,6 +23,23 @@ for (i = 0; i < songs.length; i++) {
     a[i].innerHTML = songs[i].songName;
 }
 
+function playspec(clicked_id){
+    songindex=clicked_id-1;
+    audioEle.pause();
+    audioEle.src=songs[clicked_id-1].filePath;
+    update();
+    audioEle.play();
+    if(masterplay.classList.contains("fa-play-circle"))
+        masterplay.classList.replace("fa-play-circle", "fa-pause-circle");
+    document.getElementById("gif").style.opacity = 1;
+    document.getElementById(clicked_id).classList.replace("fa-play-circle", "fa-pause-circle");
+    if(preclick!=0&&clicked_id!=preclick) {   
+        document.getElementById(preclick).classList.replace("fa-pause-circle", "fa-play-circle");
+        preclick=clicked_id;   
+    }
+    preclick=clicked_id;
+}
+
 masterplay.addEventListener('click', () => {
     if (audioEle.paused || audioEle.currentTime <= 0) {
         audioEle.play();
@@ -32,6 +51,7 @@ masterplay.addEventListener('click', () => {
         audioEle.pause();
         masterplay.classList.replace("fa-pause-circle", "fa-play-circle")
         document.getElementById("gif").style.opacity = 0;
+        document.getElementById(preclick).classList.replace("fa-pause-circle", "fa-play-circle");
     }
     //    alert('play');
     setInterval(function () {
@@ -75,6 +95,8 @@ prev.addEventListener('click', () => {
     audioEle.play();
     if(masterplay.classList.contains("fa-play-circle"))
         masterplay.classList.replace("fa-play-circle", "fa-pause-circle");
+        document.getElementById("gif").style.opacity = 1;
+        document.getElementById(preclick).classList.replace("fa-pause-circle", "fa-play-circle");
 })
 
 forw.addEventListener('click', () => {
@@ -88,6 +110,6 @@ forw.addEventListener('click', () => {
     audioEle.play();
     if(masterplay.classList.contains("fa-play-circle"))
         masterplay.classList.replace("fa-play-circle", "fa-pause-circle");
+        document.getElementById("gif").style.opacity = 1;
+    document.getElementById(preclick).classList.replace("fa-pause-circle", "fa-play-circle");
 })
-
-
